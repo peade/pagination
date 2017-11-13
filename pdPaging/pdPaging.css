@@ -8,9 +8,12 @@ ul.pagination {
       border: 1px solid blue;
       line-height: 20px;
       padding: 5px 10px;
-      cursor: pointer; }
+      cursor: pointer;
+      border-radius: 5px; }
     ul.pagination li .active-page {
       background-color: blue;
       color: #fff; }
+    ul.pagination li .paging-disabled {
+      color: #ddd; }
 
 /*# sourceMappingURL=pdPaging.css.map */
