@@ -20,7 +20,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         for (var o in option) {
             this.options[o] = option[o];
         }
-        console.log(this.options);
+        // console.log(this.options)
         this.render();
     };
 
@@ -127,7 +127,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
 
             function addDot() {
-                var dotEle = stringToDom('<li><span>...</span></li>');
+                var dotEle = stringToDom('<li><span class="paging-dot">...</span></li>');
                 ulEle.appendChild(dotEle);
             }
 
@@ -146,7 +146,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 //上一页
                 if (matchesSelector.call(target, '.prev-span')) {
                     if (target.className.indexOf('paging-disabled') > -1) {
-                        return false;
+                        return;
                     }
                     if (_this.options.pageNo <= 1) {
                         _this.options.callback(1);
@@ -157,7 +157,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 //下一页
                 if (matchesSelector.call(target, '.next-span')) {
                     if (target.className.indexOf('paging-disabled') > -1) {
-                        return false;
+                        return;
                     }
                     if (_this.options.pageNo >= pageAmount) {
                         _this.options.callback(pageAmount);

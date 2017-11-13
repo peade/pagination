@@ -1,5 +1,6 @@
 ul.pagination {
   list-style: none;
+  text-align: center;
   li {
     display: inline-block;
     span {
@@ -18,7 +19,29 @@ ul.pagination {
     .paging-disabled{
       color:#ddd;
     }
+    .paging-dot{
+      border:none
+    }
 
+  }
+  input{
+    line-height: 20px;
+    height: 20px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    width: 30px;
+    outline: none;
+  }
+  button{
+    background-color: blue;
+    outline: none;
+    border: 1px solid blue;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 10px;
   }
 
 }

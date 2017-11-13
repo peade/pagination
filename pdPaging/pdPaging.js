@@ -16,7 +16,7 @@
         for (let o in option) {
             this.options[o] = option[o]
         }
-        console.log(this.options)
+       // console.log(this.options)
         this.render()
     };
 
@@ -128,7 +128,7 @@
             }
 
             function addDot() {
-                let dotEle = stringToDom('<li><span>...</span></li>')
+                let dotEle = stringToDom('<li><span class="paging-dot">...</span></li>')
                 ulEle.appendChild(dotEle)
             }
 
@@ -147,7 +147,7 @@
                 //上一页
                 if (matchesSelector.call(target, '.prev-span')) {
                     if (target.className.indexOf('paging-disabled') > -1) {
-                        return false
+                        return
                     }
                     if (_this.options.pageNo <= 1) {
                         _this.options.callback(1)
@@ -158,7 +158,7 @@
                 //下一页
                 if (matchesSelector.call(target, '.next-span')) {
                     if (target.className.indexOf('paging-disabled') > -1) {
-                        return false
+                        return
                     }
                     if (_this.options.pageNo >= pageAmount) {
                         _this.options.callback(pageAmount)

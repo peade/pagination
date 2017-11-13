@@ -1,5 +1,6 @@
 ul.pagination {
-  list-style: none; }
+  list-style: none;
+  text-align: center; }
   ul.pagination li {
     display: inline-block; }
     ul.pagination li span {
@@ -15,5 +16,24 @@ ul.pagination {
       color: #fff; }
     ul.pagination li .paging-disabled {
       color: #ddd; }
+    ul.pagination li .paging-dot {
+      border: none; }
+  ul.pagination input {
+    line-height: 20px;
+    height: 20px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    width: 30px;
+    outline: none; }
+  ul.pagination button {
+    background-color: blue;
+    outline: none;
+    border: 1px solid blue;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 10px; }
 
 /*# sourceMappingURL=pdPaging.css.map */
