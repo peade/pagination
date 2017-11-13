@@ -9,10 +9,14 @@ ul.pagination {
       line-height: 20px;
       padding: 5px 10px;
       cursor: pointer;
+      border-radius: 5px;
     }
     .active-page{
       background-color: blue;
       color:#fff;
+    }
+    .paging-disabled{
+      color:#ddd;
     }
 
   }

@@ -89,6 +89,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             containerEle.innerHTML = '';
             containerEle.appendChild(ulEle);
             addTotalNum();
+
             function addPageNum(start, end, current) {
                 console.log(start, end, current);
                 for (var i = start; i <= end; i++) {
@@ -104,18 +105,32 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
 
             function addPrev() {
-                var prevEle = stringToDom('<li><span class="prev-span">' + _this.options.prevText + '</span></li>');
+                var prevEle = void 0;
+                if (currentNo === 1) {
+                    prevEle = stringToDom('<li><span class="prev-span paging-disabled">' + _this.options.prevText + '</span></li>');
+                } else {
+                    prevEle = stringToDom('<li><span class="prev-span">' + _this.options.prevText + '</span></li>');
+                }
+
                 ulEle.appendChild(prevEle);
             }
 
             function addNext() {
-                var nextEle = stringToDom('<li><span class="next-span">' + _this.options.nextText + '</span></li>');
+                var nextEle = void 0;
+                if (currentNo === endNo) {
+                    nextEle = stringToDom('<li><span class="next-span paging-disabled">' + _this.options.nextText + '</span></li>');
+                } else {
+                    nextEle = stringToDom('<li><span class="next-span">' + _this.options.nextText + '</span></li>');
+                }
+
                 ulEle.appendChild(nextEle);
             }
+
             function addDot() {
                 var dotEle = stringToDom('<li><span>...</span></li>');
                 ulEle.appendChild(dotEle);
             }
+
             function addTotalNum() {
                 var totalEle = stringToDom('<li>共' + _this.options.totalSize + '条</li>');
                 ulEle.appendChild(totalEle);
@@ -130,7 +145,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 }
                 //上一页
                 if (matchesSelector.call(target, '.prev-span')) {
-                    console.log(_this.options.pageNo);
+                    if (target.className.indexOf('paging-disabled') > -1) {
+                        return false;
+                    }
                     if (_this.options.pageNo <= 1) {
                         _this.options.callback(1);
                     } else {
@@ -139,7 +156,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 }
                 //下一页
                 if (matchesSelector.call(target, '.next-span')) {
-                    console.log(_this.options.pageNo);
+                    if (target.className.indexOf('paging-disabled') > -1) {
+                        return false;
+                    }
                     if (_this.options.pageNo >= pageAmount) {
                         _this.options.callback(pageAmount);
                     } else {
