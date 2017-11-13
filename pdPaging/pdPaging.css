@@ -1,0 +1,16 @@
+ul.pagination {
+  list-style: none; }
+  ul.pagination li {
+    display: inline-block; }
+    ul.pagination li span {
+      display: inline-block;
+      margin: 0 10px;
+      border: 1px solid blue;
+      line-height: 20px;
+      padding: 5px 10px;
+      cursor: pointer; }
+    ul.pagination li .active-page {
+      background-color: blue;
+      color: #fff; }
+
+/*# sourceMappingURL=pdPaging.css.map */

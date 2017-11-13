@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hfPagination</title>
+    <link rel="stylesheet" href="pdPaging.css">
+</head>
+<body>
+<div id="pagination">
+
+</div>
+<script src="pdPaging-compile.js"></script>
+<script>
+    function getPageContent(pageNo) {
+        new pdPaging({
+            pageNo:pageNo,
+            pageSize:10,
+            totalSize:101,
+            container:'#pagination',
+            callback:function (num) {
+                getPageContent(num)
+            }
+        })
+    }
+    getPageContent(1)
+
+
+</script>
+</body>
+</html>

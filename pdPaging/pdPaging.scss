@@ -1,0 +1,20 @@
+ul.pagination {
+  list-style: none;
+  li {
+    display: inline-block;
+    span {
+      display: inline-block;
+      margin: 0 10px;
+      border: 1px solid blue;
+      line-height: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .active-page{
+      background-color: blue;
+      color:#fff;
+    }
+
+  }
+
+}

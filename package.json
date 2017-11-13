@@ -1,0 +1,25 @@
+{
+  "name": "learningfrontend",
+  "version": "1.0.0",
+  "description": "learning Front End",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peade/learningFrontEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peade/learningFrontEnd/issues"
+  },
+  "homepage": "https://github.com/peade/learningFrontEnd#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.6.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}
